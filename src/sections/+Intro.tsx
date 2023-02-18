@@ -4,26 +4,25 @@ export function Intro() {
   return (
     <Root>
       <H1>
-        This is <G warm>aardhyn.dev</G>
-        <br />
-        My personal website and playground on the web
+        This is <G warm>aardhyn.dev</G>.
+        <br />A personal website and playground on the web
       </H1>
       <P>
-        I'm a Software Developer in small team developing website building
-        software, and final year <G cool>Bachelor of Information Technology</G>{" "}
-        student.
+        I'm a <G warm>Front-end Software Developer</G> in small team developing
+        a website builder, and final year{" "}
+        <G cool>Bachelor of Information Technology</G> student.
       </P>
       <P>
         I have a love for software engineering with <G cool>React.js</G> and
         <G cool> TypeScript</G>, and low-level application and game engine
-        development with <G cool>C++20</G>.
+        development with <G cool>C++20</G> and <G cool>Web Assembly</G>.
       </P>
     </Root>
   );
 }
 const Root = styled("section", {
   margin: "0 auto",
-  padding: "256px 16px",
+  padding: "128px 16px",
   maxWidth: 800,
   width: "100%",
 });
