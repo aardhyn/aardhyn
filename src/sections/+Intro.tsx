@@ -6,17 +6,17 @@ export function Intro() {
       <H1>
         This is <G warm>aardhyn.dev</G>
         <br />
-        My personal website and playground on the web.
+        My personal website and playground on the web
       </H1>
       <P>
-        I'm a Software Developer working with a small team on website building
+        I'm a Software Developer in small team developing website building
         software, and final year <G cool>Bachelor of Information Technology</G>{" "}
         student.
       </P>
       <P>
-        I have a passion for software development with <G cool>React.js</G> and
+        I have a love for software engineering with <G cool>React.js</G> and
         <G cool> TypeScript</G>, and low-level application and game engine
-        programming with <G cool>C++20</G>
+        development with <G cool>C++20</G>.
       </P>
     </Root>
   );
