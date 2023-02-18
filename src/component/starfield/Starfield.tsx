@@ -52,6 +52,10 @@ const sizeStep = 1.006;
 const speedStep = 1.03;
 const spawnDistance = 20;
 
+// todo: replace position with distance from center
+//       so resizing ( changing the center ) moves
+//       the starfield
+
 export default function Starfield({
   width,
   height,
@@ -107,14 +111,6 @@ export default function Starfield({
     startUpdate();
     return () => clearInterval(timerId.current);
   }, [stars]);
-
-  useEffect(() => {
-    // reset on resize
-    const resize = () => setStars([]);
-    window.addEventListener("resize", resize);
-
-    return () => window.removeEventListener("resize", resize);
-  }, []);
 
   return (
     <Root
