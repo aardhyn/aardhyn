@@ -1,7 +1,7 @@
 import Starfield from "../component/starfield/Starfield";
 import portrait from "../asset/portrait.png";
 import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
-import { styled } from "@stitches/react";
+import { styled } from "../constant/stitches.config";
 import FisheyeArc from "../vector/FisheyeArc";
 
 export function Header() {
@@ -64,7 +64,8 @@ export function Header() {
           position: "absolute",
           bottom: 0,
           width: "100%",
-          height: "24%",
+          height: "8%",
+          "@sm": { height: "24%" },
         }}
       />
     </Root>

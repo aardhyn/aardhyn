@@ -1,4 +1,4 @@
-import { styled } from "@stitches/react";
+import { styled } from "../constant/stitches.config";
 
 export function Intro() {
   return (

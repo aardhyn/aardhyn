@@ -1,4 +1,4 @@
-import { styled } from "@stitches/react";
+import { styled } from "./constant/stitches.config";
 import { Header, Intro, Footer } from "./sections";
 
 export default function App() {

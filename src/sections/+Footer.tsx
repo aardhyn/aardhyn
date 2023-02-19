@@ -1,4 +1,4 @@
-import { styled } from "@stitches/react";
+import { styled } from "../constant/stitches.config";
 import logo from "../asset/logo_w.png";
 
 const start = "2022";

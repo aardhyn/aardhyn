@@ -1,4 +1,4 @@
-import { styled, CSS } from "@stitches/react";
+import { styled, CSS } from "../constant/stitches.config";
 
 export default function FisheyeArc({ css }: { css: CSS }) {
   const Svg = styled("svg", css);
