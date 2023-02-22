@@ -29,7 +29,7 @@ export function Header() {
           <GitHubLogoIcon width={24} height={24} />
         </A>
         <A
-          href="https://www.linkedin.com/in/aardhyn-lavender-521007226"
+          href="https://www.linkedin.com/in/aardhyn"
           target="_blank"
           referrerPolicy="no-referrer"
         >
