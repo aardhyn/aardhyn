@@ -26,8 +26,4 @@ const Root = styled("footer", {
   justifyContent: "center",
   padding: 16,
   gap: 16,
-  "&>img": {
-    transition: "rotate 300ms ease-in-out",
-    "&:hover": { rotate: "12deg" },
-  },
 });
