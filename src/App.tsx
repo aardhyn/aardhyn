@@ -3,16 +3,13 @@ import { Header, Intro, Footer } from "./sections";
 
 export default function App() {
   return (
-    <div className="App">
-      <Main>
-        <Header />
-        <Intro />
-        <Footer />
-      </Main>
-    </div>
+    <Main>
+      <Header />
+      <Intro />
+      <Footer />
+    </Main>
   );
 }
 const Main = styled("main", {
-  width: "100vw",
-  boxSizing: "border-box",
+  minHeight: "100vh",
 });
