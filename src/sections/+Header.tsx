@@ -3,6 +3,7 @@ import portrait from "../asset/portrait.png";
 import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { styled } from "../constant/stitches.config";
 import FisheyeArc from "../vector/FisheyeArc";
+import { A, H1 } from "../component/Typography";
 
 export function Header() {
   const height = window.innerHeight * 0.64;
@@ -56,7 +57,7 @@ export function Header() {
         />
         <div style={{ textShadow: "0 0 16px #bbb" }}>
           <H1>Aardhyn</H1>
-          <H2>Software Developer</H2>
+          <Sub>Software Developer</Sub>
         </div>
       </Section>
       <FisheyeArc
@@ -82,11 +83,6 @@ const Root = styled("header", {
   background: "-webkit-linear-gradient(270deg, #000, #001)",
 });
 
-const A = styled("a", {
-  color: "inherit",
-  textDecoration: "none",
-});
-
 const Section = styled("section", {
   padding: 16,
   color: "#fff",
@@ -96,15 +92,7 @@ const Section = styled("section", {
   gap: 16,
 });
 
-const H1 = styled("h1", {
-  color: "#fff",
-  fontSize: 48,
-  fontWeight: 700,
-  margin: 0,
-  padding: 0,
-});
-
-const H2 = styled("h2", {
+const Sub = styled("h2", {
   fontSize: 18,
   fontWeight: 400,
   color: "#fff",
