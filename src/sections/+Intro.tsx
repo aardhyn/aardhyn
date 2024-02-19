@@ -32,8 +32,8 @@ export function Intro() {
           {" "}
           TypeScript{" "}
         </G>
-        day to day, and dabble in Game Development and programming in my spare
-        time.
+        day to day, and dabble in systems programming and game development in my
+        spare time.
       </P>
       <P>
         Outside work I enjoy playing piano, walking my dog, biking from time to
