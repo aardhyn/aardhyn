@@ -15,14 +15,14 @@ export function Intro() {
         <G warm strong>
           Software Developer
         </G>{" "}
-        in small team developing a website creation and CMS platform called{" "}
+        in a small team developing a website creation and CMS platform called{" "}
         <G warm strong>
           Webstack
         </G>
         .
       </P>
       <P>
-        I'm work primarily in{" "}
+        I work primarily in{" "}
         <G cool strong>
           {" "}
           React{" "}
@@ -32,7 +32,7 @@ export function Intro() {
           {" "}
           TypeScript{" "}
         </G>
-        day to day, and dabble in systems programming and game development in my
+        day to day, and dabble in systems and game programming in my
         spare time.
       </P>
       <P>
