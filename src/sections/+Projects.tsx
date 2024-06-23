@@ -4,6 +4,7 @@ import { A, H3, P, G } from "../component/Typography";
 import { styled } from "../constant/stitches.config";
 import type { Project } from "../constant/projects";
 import { PROJECTS } from "../constant/projects";
+
 export function Projects() {
   return (
     <Section>
