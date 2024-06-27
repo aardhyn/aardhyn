@@ -5,23 +5,16 @@ import { styled } from "../constant/stitches.config";
 import FisheyeArc from "../vector/FisheyeArc";
 import { A, H1 } from "../component/Typography";
 
+const PORTRAIT_SIZE = 96;
+const PORTRAIT_OFFSET = 16;
+const VERTICAL_COVERAGE = 0.5;
+const height = window.innerHeight * VERTICAL_COVERAGE;
+
 export function Header() {
-  const height = window.innerHeight * 0.64;
   return (
     <Root css={{ height }}>
       <Starfield width={"100%"} height={"100%"} />
-      <Section
-        css={{
-          position: "absolute",
-          top: 0,
-          gap: 24,
-          color: "#fff8",
-          "& svg": {
-            transition: "color 200ms ease-in-out",
-            "&:hover": { color: "#ffff" },
-          },
-        }}
-      >
+      <Top>
         <A
           href="https://github.com/AardhynLavender"
           target="_blank"
@@ -36,30 +29,15 @@ export function Header() {
         >
           <LinkedInLogoIcon width={24} height={24} />
         </A>
-      </Section>
-      <Section
-        css={{
-          alignItems: "center",
-          position: "relative",
-          zIndex: 100,
-        }}
-      >
-        <img
-          width={96}
-          height={96}
-          src={portrait}
-          loading="lazy"
-          style={{
-            marginTop: 12, // center visually with text
-            borderRadius: 24,
-            border: "2px solid #333",
-          }}
-        />
-        <div style={{ textShadow: "0 0 16px #bbb" }}>
+      </Top>
+      <Main>
+        <Portrait src={portrait} loading="lazy" />
+        <MainText>
           <H1>Aardhyn</H1>
           <Sub>Software Developer</Sub>
-        </div>
-      </Section>
+        </MainText>
+      </Main>
+
       <FisheyeArc
         css={{
           position: "absolute",
@@ -92,10 +70,33 @@ const Section = styled("section", {
   gap: 16,
 });
 
+const Top = styled(Section, {
+  position: "absolute",
+  top: 0,
+  gap: 24,
+  color: "#fff8",
+
+  "& svg": {
+    transition: "color 200ms ease-in-out",
+    "&:hover": { color: "#ffff" },
+  },
+});
+
+const Main = styled(Section, { zIndex: 1 });
+
+const MainText = styled("div", {
+  textShadow: "0 0 16px #bbb",
+});
+
+const Portrait = styled("img", {
+  marginTop: PORTRAIT_OFFSET, // center visually with text
+  width: PORTRAIT_SIZE,
+  aspectRatio: 1,
+  borderRadius: 24,
+});
+
 const Sub = styled("h2", {
   fontSize: 18,
-  fontWeight: 400,
-  color: "#fff",
-  margin: 0,
-  padding: 0,
+  fontWeight: 500,
+  color: "#eee",
 });

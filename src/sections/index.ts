@@ -1,4 +1,3 @@
-export * from "./+Header";
-export * from "./+Intro";
-export * from "./+Footer";
-export * from "./+Projects";
+export * from "./Header";
+export * from "./Intro";
+export * from "./Footer";

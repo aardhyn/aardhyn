@@ -1,15 +1,17 @@
 import { styled } from "../constant/stitches.config";
 import { Section } from "../component/Section";
 import { H2, P, G } from "../component/Typography";
-import { COOL, WARM } from "../constant/gradient";
 
 export function Intro() {
   return (
     <Section>
       <H2>
-        This is <G warm>aardhyn.dev</G>.
-        <br />A personal website on the web.
+        This is <G warm>aardhyn.dev</G>
+        <br />A personal website on the web
       </H2>
+
+      <Spacer />
+
       <P>
         I'm a{" "}
         <G warm strong>
@@ -32,13 +34,16 @@ export function Intro() {
           {" "}
           TypeScript{" "}
         </G>
-        day to day, and dabble in systems and game programming in my
-        spare time.
+        day to day, dabble in systems and game programming in my spare time, and
+        play heavily modded Minecraft.
       </P>
       <P>
-        Outside work I enjoy playing piano, walking my dog, biking from time to
-        time, and playing modded Minecraft.
+        Currently taking a deep dive into Rust and self-hosting with Coolify
       </P>
     </Section>
   );
 }
+
+const Spacer = styled("div", {
+  height: 16,
+});

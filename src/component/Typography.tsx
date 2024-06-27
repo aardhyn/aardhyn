@@ -3,15 +3,15 @@ import { WARM, COOL } from "../constant/gradient";
 
 export const H1 = styled("h1", {
   color: "#fff",
-  fontSize: 48,
-  fontWeight: 700,
+  fontSize: 64,
+  fontWeight: 600,
   margin: 0,
   padding: 0,
 });
 
 export const H2 = styled("h2", {
   fontSize: 32,
-  fontWeight: 700,
+  fontWeight: 600,
   color: "#fff",
   margin: 0,
   padding: 0,
