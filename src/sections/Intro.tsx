@@ -38,7 +38,15 @@ export function Intro() {
         play heavily modded Minecraft.
       </P>
       <P>
-        Currently taking a deep dive into Rust and self-hosting with Coolify
+        Currently taking a deep dive into{" "}
+        <G warm cool>
+          Rust
+        </G>{" "}
+        and self-hosting with{" "}
+        <G warm cool>
+          Coolify
+        </G>
+        .
       </P>
     </Section>
   );
