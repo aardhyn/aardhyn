@@ -15,7 +15,7 @@ export function Intro() {
       <P>
         I'm a{" "}
         <G warm strong>
-          Software Developer
+          Software Engineer
         </G>{" "}
         in a small team developing a website creation and CMS platform called{" "}
         <G warm strong>
@@ -34,8 +34,8 @@ export function Intro() {
           {" "}
           TypeScript{" "}
         </G>
-        day to day, dabble in systems and game programming in my spare time, and
-        play heavily modded Minecraft.
+        day to day, dabble in low-level programming in my spare time, and play
+        heavily modded Minecraft.
       </P>
       <P>
         Currently taking a deep dive into{" "}
