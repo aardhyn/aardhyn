@@ -37,17 +37,6 @@ export function Intro() {
         day to day, dabble in low-level programming in my spare time, and play
         heavily modded Minecraft.
       </P>
-      <P>
-        Currently taking a deep dive into{" "}
-        <G warm cool>
-          Rust
-        </G>{" "}
-        and self-hosting with{" "}
-        <G warm cool>
-          Coolify
-        </G>
-        .
-      </P>
     </Section>
   );
 }
