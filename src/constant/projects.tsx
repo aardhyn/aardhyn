@@ -1,55 +1,62 @@
-import {
-  CubeIcon,
-  ReaderIcon,
-  PlayIcon,
-  ShadowIcon,
-} from "@radix-ui/react-icons";
 import { G } from "../component/Typography";
+import { ReactNode } from "react";
+
+export type Project = {
+  title: string;
+  description: ReactNode;
+  asset: string;
+  meta?: string;
+  link: {
+    live?: string;
+    source?: string;
+  };
+};
 
 export const PROJECTS = [
   {
     title: "Component",
-    icon: <CubeIcon />,
+    asset: "component.png",
     description: (
       <>
-        A visual programming editor and game engine on the web written in{" "}
-        <G cool>React</G> and <G cool>C++23</G> with <G cool>WebAssembly</G>,
-        for my final year Bachelor of Information Technology Special Topic.
+        A visual programming editor built using <G cool>React</G> and{" "}
+        <G cool>C++23</G> with <G cool>WebAssembly</G> for my final year
+        Bachelor of Information Technology Special Topic
       </>
     ),
-    links: {
-      live: "component.aardhyn.dev",
-      source: "github.com/aardhynLavender/component",
+    link: {
+      live: "https://component.aardhyn.dev",
+      source: "https://github.com/aardhyn/component",
     },
   },
   {
-    title: "Notes",
-    icon: <ReaderIcon />,
+    title: "Webstack",
+    asset: "webstack.png",
+    meta: "Job",
     description: (
       <>
-        A minimal notes app written in <G cool>React</G> and{" "}
-        <G cool>TypeScript</G>. Aiming to do a small set of things really really
-        well. So simple the software doesn't even have a name.
+        A <G cool>no-code</G> website creation and CMS platform owned an
+        operated in New Zealand. Aiming to strike the balance between simplicity
+        and flexibility.
       </>
     ),
-    links: {
-      live: "notes.aardhyn.dev",
-      source: "github.com/aardhynLavender/note-app-react",
+    link: {
+      live: "https://app.webstack.co.nz",
     },
   },
   {
-    title: "Breakout",
+    title: "Invoice",
+    asset: "invoice.png",
+    meta: "Client Project",
     description: (
       <>
-        A simple Breakout clone written in <G cool>C#</G> and{" "}
-        <G cool>WinForms</G> for a first year Bachelor of Information Technology
-        assignment.
+        Simple invoice generation and management software optimized for small
+        businesses and self-employed individuals. Written in <G cool>React</G>{" "}
+        with a <G cool>Rust</G> and <G cool>Postgres</G> backend.
       </>
     ),
-    icon: <ShadowIcon />,
-    links: {
-      source: "github.com/aardhynLavender/breakout",
+    link: {
+      // source: "https://github.com/aardhyn/invoice", // fixme: private repo
+      // live: "https://invoice.aardhyn.dev", // fixme: not deployed
     },
   },
-];
-export type Project = (typeof PROJECTS)[number];
+] satisfies Project[];

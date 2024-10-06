@@ -2,11 +2,8 @@ import { createStitches, CSS as StitchesCSS } from "@stitches/react";
 
 const config = createStitches({
   media: {
-    sm: "(min-width: 640px)",
-    md: "(min-width: 768px)",
-    lg: "(min-width: 1024px)",
-    xl: "(min-width: 1280px)",
-    xxl: "(min-width: 1536px)",
+    sm: "(max-width: 900px)",
+    md: "(max-width: 1400px)",
   },
 });
 const { styled, css } = config;

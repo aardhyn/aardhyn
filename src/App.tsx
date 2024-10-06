@@ -1,11 +1,15 @@
 import { styled } from "./constant/stitches.config";
-import { Header, Intro, Footer } from "./sections";
+import { Header, Intro, Footer } from "./section";
+import { Projects } from "./section/Project";
+
+import purple from "./asset/purple.jpg";
 
 export default function App() {
   return (
     <Main>
       <Header />
       <Intro />
+      <Projects />
       <Greedy />
       <Footer />
     </Main>
@@ -13,11 +17,6 @@ export default function App() {
 }
 const Main = styled("main", {
   minHeight: "100vh",
-  display: "flex",
-  flexDirection: "column",
-  gap: 96,
 });
 
-const Greedy = styled("div", {
-  flex: 1,
-});
+const Greedy = styled("div", { flex: 1 });

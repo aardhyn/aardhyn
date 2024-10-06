@@ -3,22 +3,22 @@ import { WARM, COOL } from "../constant/gradient";
 
 export const H1 = styled("h1", {
   color: "#fff",
-  fontSize: 64,
+  fontSize: "4rem",
   fontWeight: 600,
   margin: 0,
   padding: 0,
 });
 
 export const H2 = styled("h2", {
-  fontSize: 32,
+  fontSize: "3rem",
   fontWeight: 600,
   color: "#fff",
   margin: 0,
   padding: 0,
 });
 
-export const H3 = styled("h2", {
-  fontSize: 18,
+export const H3 = styled("h3", {
+  fontSize: "2rem",
   fontWeight: 700,
   color: "#fff",
   margin: 0,
@@ -26,13 +26,12 @@ export const H3 = styled("h2", {
 });
 
 export const A = styled("a", {
-  color: "inherit",
   textDecoration: "none",
 });
 
 export const P = styled("p", {
   color: "#fff",
-  fontWeight: 400,
+  fontSize: "1rem",
   lineHeight: 1.5,
 });
 
@@ -52,11 +51,6 @@ export const G = styled("span", {
         backgroundClip: "text",
         WebkitBackgroundClip: "text",
         WebkitTextFillColor: "transparent",
-      },
-    },
-    strong: {
-      true: {
-        fontWeight: 600,
       },
     },
   },

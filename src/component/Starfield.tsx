@@ -7,10 +7,10 @@ type Vec2 = {
 };
 type Star = {
   position: Vec2;
-  angle: number;
   speed: number;
-  opacity: number;
   size: number;
+  angle: number;
+  opacity: number;
   color: CSS["color"];
 };
 
@@ -45,7 +45,7 @@ function isVisible(position: Vec2, w: number, h: number) {
   return position.x > 0 && position.x < w && position.y > 0 && position.y < h;
 }
 
-const fps = 1000 / 60;
+const FPS = 60;
 const opacity = 0.02;
 const opacityStep = 1.1;
 const sizeStep = 1.006;
@@ -57,11 +57,13 @@ const spawnDistance = 20;
 //       the starfield
 
 export default function Starfield({
-  width,
-  height,
+  width = "100%",
+  height = "100%",
+  fps = FPS,
 }: {
-  width: CSS["width"];
-  height: CSS["height"];
+  width?: CSS["width"];
+  height?: CSS["height"];
+  fps?: number;
 }) {
   const [stars, setStars] = useState<Star[]>([]);
   const ref = useRef<SVGSVGElement>(null);
@@ -105,21 +107,17 @@ export default function Starfield({
   // set update
   const timerId = useRef<number>();
   const startUpdate = () => {
-    timerId.current = setInterval(() => update(), fps);
+    timerId.current = setInterval(() => update(), 1000 / fps);
   };
   useEffect(() => {
     startUpdate();
-    return () => clearInterval(timerId.current);
+    return () => {
+      clearInterval(timerId.current);
+    };
   }, [stars]);
 
   return (
-    <Root
-      ref={ref}
-      css={{
-        width,
-        height,
-      }}
-    >
+    <Root ref={ref} css={{ width, height }}>
       {stars.map((star, index) => (
         <Star key={index} star={star} />
       ))}
@@ -129,5 +127,6 @@ export default function Starfield({
 
 const Root = styled("svg", {
   position: "absolute",
+  inset: 0,
   pointerEvents: "none",
 });
