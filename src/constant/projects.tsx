@@ -18,9 +18,9 @@ export const PROJECTS = [
     asset: "component.png",
     description: (
       <>
-        A visual programming editor built using <G cool>React</G> and{" "}
-        <G cool>C++23</G> with <G cool>WebAssembly</G> for my final year
-        Bachelor of Information Technology Special Topic
+        Visual programming editor built using <G cool>React</G> and{" "}
+        <G cool>C++23</G> with <G cool>WebAssembly</G> for a Bachelor of
+        Information Technology Special Topic
       </>
     ),
     link: {
@@ -44,7 +44,7 @@ export const PROJECTS = [
     },
   },
   {
-    title: "Invoice",
+    title: "Inv.",
     asset: "invoice.png",
     meta: "Client Project",
     description: (
