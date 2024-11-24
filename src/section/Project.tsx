@@ -27,8 +27,7 @@ export function Projects() {
 const ProjectGrid = styled("div", {
   display: "grid",
   gap: 24,
-  gridTemplateColumns: "repeat(3, 1fr)",
-  gridAutoRows: "1fr", // equal height rows
+  gridTemplateColumns: "repeat(3, minMax(0, 1fr))",
 
   "@md": { gridTemplateColumns: "repeat(2, 1fr)" },
   "@sm": { gridTemplateColumns: "repeat(1, 1fr)" },
