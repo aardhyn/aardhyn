@@ -22,7 +22,7 @@ export const ContentRoot = styled("div", {
   flexDirection: "column",
   gap: 24,
   width: "100%",
-  maxWidth: 1600,
+  maxWidth: 1300,
   paddingInline: 24,
   paddingBlock: 64,
 

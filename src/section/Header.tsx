@@ -9,15 +9,13 @@ import { A, H1 } from "../component/Typography";
 import { Card } from "../component/Card";
 import { Section } from "../component/Section";
 
-import purple from "../asset/purple.jpg";
-
 const FPS = 32;
 const ICON_SIZE = "1rem";
 
 export function Header() {
   return (
     <Root>
-      <HeaderCard as="header">
+      <HeaderCard as="header" variant="dreamy">
         <Top>
           <Heading>
             <H1>Aardhyn</H1>
@@ -56,18 +54,6 @@ const HeaderCard = styled(Card, {
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",
-
-  overflow: "hidden",
-  "&::before": {
-    content: "",
-    position: "absolute",
-    inset: 0,
-    zIndex: -1,
-    backgroundImage: `url(${purple})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    filter: "blur(16px)",
-  },
 });
 
 const Top = styled("div", {
