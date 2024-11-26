@@ -22,7 +22,7 @@ export function Intro() {
         <P>
           <Balancer>
             Initially starting as a junior, I now maintain the entirety of the
-            frontend, and contribute heavily to the design and direction of the
+            frontend and contribute heavily to the design and direction of the
             software as we steam ahead towards an official release.
           </Balancer>
         </P>
@@ -33,7 +33,7 @@ export function Intro() {
             of experience developing software using <G cool>React</G> and{" "}
             <G cool>TypeScript</G>, I've gained a solid foundation in frontend
             web technologies, networking, databases, and devops. For now, I'm
-            continuing to hone my skills as a software engineer and invest in
+            continuing to hone my skills as a Software Engineer and invest in
             opportunities to grow into a Full Stack role.
           </Balancer>
         </P>
@@ -41,8 +41,8 @@ export function Intro() {
           <Balancer>
             Outside of my day job, I have a strong interest in low-level and
             systems programming using languages like <G cool>Rust</G> and{" "}
-            <G cool>C++</G>, and want to shift my career in this direction in
-            the next 5 years.
+            <G cool>C++</G>, and aim to shift my career in this direction in the
+            next 5 years.
           </Balancer>
         </P>
       </Article>
