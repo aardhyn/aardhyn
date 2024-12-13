@@ -35,7 +35,15 @@ export const P = styled("p", {
   lineHeight: 1.5,
 });
 
+const CLIP_PREVENTION = "0.1rem";
+
 export const G = styled("span", {
+  // note: css BackgroundClip clips text where it overlaps with an adjacent
+  // character, (eg: 'gradient-text,' <- 't' overlaps ',') so we need to offset
+  // the container to prevent clipping.
+  paddingInline: CLIP_PREVENTION,
+  marginInline: `-${CLIP_PREVENTION}`,
+
   variants: {
     warm: {
       true: {
