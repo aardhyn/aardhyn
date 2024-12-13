@@ -14,9 +14,10 @@ export function Intro() {
         <P>
           <Balancer>
             I'm a <G warm>Software Engineer</G> with a passion for building high
-            quality and maintainable software. I work in a small team developing
-            a website builder and CMS platform called <G cool>Webstack</G>.
-            Developed and hosted completely within <G cool>New Zealand</G>.
+            quality products with beautiful design. I work in a small team
+            developing a website builder and CMS platform called{" "}
+            <G cool>Webstack</G>. Developed and hosted completely within{" "}
+            <G cool>New Zealand</G>.
           </Balancer>
         </P>
         <P>
@@ -29,12 +30,12 @@ export function Intro() {
         <P>
           <Balancer>
             Having graduated the <G warm>Bachelor of Information Technology</G>{" "}
-            with <G cool>Distinction</G> this year, and with <G cool>2 years</G>{" "}
-            of experience developing software using <G cool>React</G> and{" "}
-            <G cool>TypeScript</G>, I've gained a solid foundation in frontend
-            web technologies, networking, databases, and devops. For now, I'm
-            continuing to hone my skills as a Software Engineer and invest in
-            opportunities to grow into a Full Stack role.
+            with <G cool>Distinction</G> earlier this year, and with{" "}
+            <G cool>2 years</G> of experience developing software using{" "}
+            <G cool>React</G> and <G cool>TypeScript</G>, I've gained a solid
+            foundation in frontend web technologies, networking, databases, and
+            devops. For now, I'm continuing to hone my skills as a Software
+            Engineer and invest in opportunities to grow into a Full Stack role.
           </Balancer>
         </P>
         <P>
