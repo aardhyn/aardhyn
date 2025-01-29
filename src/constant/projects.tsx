@@ -18,9 +18,9 @@ export const PROJECTS = [
     asset: "component.png",
     description: (
       <>
-        Visual programming editor built using <G cool>React</G> and{" "}
-        <G cool>C++23</G> with <G cool>WebAssembly</G> for a Bachelor of
-        Information Technology Special Topic
+        Visual programming editor built using <G color="cool">React</G> and{" "}
+        <G color="cool">C++23</G> with <G color="cool">WebAssembly</G> for a
+        Bachelor of Information Technology Special Topic
       </>
     ),
     link: {
@@ -34,9 +34,9 @@ export const PROJECTS = [
     meta: "Job",
     description: (
       <>
-        A <G cool>no-code</G> website creation and CMS platform owned an
-        operated in New Zealand. Aiming to strike the balance between simplicity
-        and flexibility.
+        A <G color="cool">no-code</G> website creation and CMS platform owned
+        and operated in New Zealand. Aiming to strike the balance between
+        simplicity and flexibility.
       </>
     ),
     link: {
@@ -50,8 +50,9 @@ export const PROJECTS = [
     description: (
       <>
         Simple invoice generation and management software optimized for small
-        businesses and self-employed individuals. Written in <G cool>React</G>{" "}
-        with a <G cool>Rust</G> and <G cool>Postgres</G> backend.
+        businesses and self-employed individuals. Written in{" "}
+        <G color="cool">React</G> with a <G color="cool">Rust</G> and{" "}
+        <G color="cool">Postgres</G> backend.
       </>
     ),
     link: {

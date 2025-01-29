@@ -1,5 +1,5 @@
-import { CSS, styled } from "@stitches/react";
-import { useEffect, useRef, useState } from "react";
+import { styled } from "../../styled-system/jsx";
+import { CSSProperties, useEffect, useRef, useState } from "react";
 
 type Vec2 = {
   x: number;
@@ -11,7 +11,7 @@ type Star = {
   size: number;
   angle: number;
   opacity: number;
-  color: CSS["color"];
+  color: CSSProperties["color"];
 };
 
 function Star({ star }: { star: Star }) {
@@ -61,8 +61,8 @@ export default function Starfield({
   height = "100%",
   fps = FPS,
 }: {
-  width?: CSS["width"];
-  height?: CSS["height"];
+  width?: CSSProperties["width"];
+  height?: CSSProperties["height"];
   fps?: number;
 }) {
   const [stars, setStars] = useState<Star[]>([]);
@@ -126,7 +126,9 @@ export default function Starfield({
 }
 
 const Root = styled("svg", {
-  position: "absolute",
-  inset: 0,
-  pointerEvents: "none",
+  base: {
+    position: "absolute",
+    inset: 0,
+    pointerEvents: "none",
+  },
 });

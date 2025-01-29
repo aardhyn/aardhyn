@@ -4,18 +4,22 @@ import {
   GitHubLogoIcon,
   LinkedInLogoIcon,
 } from "@radix-ui/react-icons";
-import { styled } from "../constant/stitches.config";
-import { A, H1 } from "../component/Typography";
+import { styled } from "../../styled-system/jsx";
+import { H1 } from "../component/Typography";
 import { Card } from "../component/Card";
 import { Section } from "../component/Section";
+import purple from "../asset/purple.jpg";
+import { Link } from "../component/Link";
+import { Greedy } from "../component/Greedy";
 
 const FPS = 32;
 const ICON_SIZE = "1rem";
+const ICON_PROPS = { width: ICON_SIZE, height: ICON_SIZE } as const;
 
 export function Header() {
   return (
     <Root>
-      <HeaderCard as="header" variant="dreamy">
+      <HeaderCard>
         <Top>
           <Heading>
             <H1>Aardhyn</H1>
@@ -23,70 +27,90 @@ export function Header() {
           </Heading>
         </Top>
         <Bottom>
-          <Aside>
-            <Link href="https://github.com/aardhyn">
-              <GitHubLogoIcon width={ICON_SIZE} height={ICON_SIZE} />
-              GitHub
-            </Link>
-            <Link href="https://www.linkedin.com/in/aardhyn">
-              <LinkedInLogoIcon width={ICON_SIZE} height={ICON_SIZE} />
-              LinkedIn
-            </Link>
-          </Aside>
-          <Aside>
-            <Link href="https://www.op.ac.nz/programmes/nzqa/bachelor-of-information-technology">
-              <BookmarkIcon width={ICON_SIZE} height={ICON_SIZE} />
-              BIT with Distinction
-            </Link>
-          </Aside>
+          <Link
+            href="https://github.com/aardhyn"
+            leadingIcon={<GitHubLogoIcon {...ICON_PROPS} />}
+          >
+            GitHub
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/aardhyn"
+            leadingIcon={<LinkedInLogoIcon {...ICON_PROPS} />}
+          >
+            LinkedIn
+          </Link>
+          <Greedy />
+          <Link
+            href="https://www.op.ac.nz/programmes/nzqa/bachelor-of-information-technology"
+            leadingIcon={<BookmarkIcon {...ICON_PROPS} />}
+          >
+            BIT with Distinction
+          </Link>
         </Bottom>
         <Starfield fps={FPS} />
+        <Image src={purple} alt="abstract purple background" />
       </HeaderCard>
     </Root>
   );
 }
-const Root = styled(Section, { minHeight: 200 });
+const Root = styled(Section, {
+  base: {
+    minHeight: "200px",
+  },
+});
 
 const HeaderCard = styled(Card, {
-  position: "relative", // starfield is absolute
-  height: 400,
-  padding: 24,
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "space-between",
+  base: {
+    position: "relative", // starfield is absolute
+    height: "400px",
+    padding: "24px",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+    overflow: "hidden",
+  },
 });
 
 const Top = styled("div", {
-  display: "flex",
-  flexDirection: "row",
-  justifyContent: "space-between",
-  alignItems: "center",
+  base: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
 });
 const Bottom = styled("div", {
-  display: "flex",
-  justifyContent: "space-between",
-  gap: 16,
-});
-const Link = styled(A, {
-  display: "inline-flex",
-  gap: 5,
-  alignItems: "center",
-  fontSize: "0.8rem",
-
-  transition: "opacity 200ms ease-in-out",
-  opacity: 0.5,
-  "&:hover": { opacity: 1 },
+  base: {
+    display: "flex",
+    justifyContent: "space-between",
+    gap: "16px",
+  },
 });
 
-const Aside = styled("aside", {
-  display: "flex",
-  gap: 16,
+const Image = styled("img", {
+  base: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+    objectFit: "cover",
+    objectPosition: "center",
+    filter: "blur(8px)",
+    zIndex: -1,
+  },
 });
 
-const Heading = styled("article", { textShadow: "0 0 32px #000" });
+const Heading = styled("article", {
+  base: {
+    textShadow: "0 0 32px #000",
+  },
+});
 const Sub = styled("h2", {
-  fontSize: "1.15rem",
-  fontWeight: 500,
-  color: "#ccc",
-  marginTop: -4,
+  base: {
+    fontSize: "1.15rem",
+    fontWeight: 500,
+    color: "#ccc",
+    marginTop: "-4px",
+  },
 });

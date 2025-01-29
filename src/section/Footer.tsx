@@ -1,4 +1,4 @@
-import { styled } from "../constant/stitches.config";
+import { styled } from "../../styled-system/jsx";
 import signature from "../asset/signature.png";
 
 const START_DATE = new Date("2023-02-18");
@@ -27,12 +27,14 @@ export function Footer() {
   );
 }
 const Root = styled("footer", {
-  color: "#fff",
-  margin: "0 auto",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  padding: 16,
-  gap: 16,
-  paddingTop: 128,
+  base: {
+    color: "#fff",
+    margin: "0 auto",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: "16px",
+    gap: "16px",
+    paddingTop: "128px",
+  },
 });

@@ -1,28 +1,38 @@
 import { Link2Icon } from "@radix-ui/react-icons";
-import { ComponentProps } from "react";
-import { styled } from "../constant/stitches.config";
+import { styled } from "../../styled-system/jsx";
 import { A } from "./Typography";
+import { RecipeVariantProps } from "../../styled-system/types";
+import { cva } from "../../styled-system/css";
+import { ComponentProps, ReactNode } from "react";
+
+type LinkProps = ComponentProps<typeof A> & {
+  leadingIcon?: ReactNode | false;
+  children: ReactNode;
+} & RecipeVariantProps<typeof styles>;
 
 export function Link({
   children,
+  leadingIcon = <Link2Icon color="#aaa" />,
   ...props
-}: { href: string } & ComponentProps<typeof A>) {
+}: LinkProps) {
   return (
     <LinkRoot {...props}>
-      <Link2Icon color="#aaa" />
-      <span>{children}</span>
+      {leadingIcon}
+      {children}
     </LinkRoot>
   );
 }
-const LinkRoot = styled(A, {
-  display: "flex",
-  alignItems: "center",
-  gap: 8,
-  color: "#aaa",
-  borderRadius: 8,
-  padding: 8,
 
-  background: "transparent",
-  transition: "background 200ms",
-  "&:hover": { background: "#050505" },
+const styles = cva({
+  base: {
+    display: "inline-flex",
+    gap: "8px",
+    alignItems: "center",
+    padding: "8px",
+
+    opacity: 0.5,
+    transition: "opacity 200ms ease-in-out",
+    "&:hover": { opacity: 1 },
+  },
 });
+const LinkRoot = styled(A, styles);

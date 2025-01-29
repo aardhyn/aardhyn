@@ -1,10 +1,11 @@
 import { Card } from "../component/Card";
 import { H2, H3, P } from "../component/Typography";
 import { PROJECTS, type Project } from "../constant/projects";
-import { styled } from "../constant/stitches.config";
+import { styled } from "../../styled-system/jsx";
 import { Section } from "../component/Section";
 import { Badge } from "../component/Badge";
 import { Link } from "../component/Link";
+import { css } from "../../styled-system/css";
 
 const GITHUB_PROJECTS_URL = "https://github.com/aardhyn?tab=repositories";
 
@@ -18,19 +19,21 @@ export function Projects() {
           <Project key={i} project={project} />
         ))}
       </ProjectGrid>
-      <Link href={GITHUB_PROJECTS_URL} css={{ alignSelf: "center" }}>
+      <Link href={GITHUB_PROJECTS_URL} className={css({ alignSelf: "center" })}>
         All Projects
       </Link>
     </Section>
   );
 }
 const ProjectGrid = styled("div", {
-  display: "grid",
-  gap: 24,
-  gridTemplateColumns: "repeat(3, minMax(0, 1fr))",
+  base: {
+    display: "grid",
+    gap: "24px",
+    gridTemplateColumns: "repeat(1, 1fr)",
 
-  "@md": { gridTemplateColumns: "repeat(2, 1fr)" },
-  "@sm": { gridTemplateColumns: "repeat(1, 1fr)" },
+    lg: { gridTemplateColumns: "repeat(3, minMax(0, 1fr))" },
+    sm: { gridTemplateColumns: "repeat(2, 1fr)" },
+  },
 });
 
 function Project({ project }: { project: Project }) {
@@ -56,31 +59,41 @@ function Project({ project }: { project: Project }) {
 }
 
 const ProjectRoot = styled(Card, {
-  gap: 24,
-  flexDirection: "column",
+  base: {
+    gap: "24px",
+    flexDirection: "column",
+  },
 });
 const ProjectBody = styled("article", {
-  display: "flex",
-  flexDirection: "column",
-  width: "100%",
-  gap: 16,
+  base: {
+    display: "flex",
+    flexDirection: "column",
+    width: "100%",
+    gap: "16px",
+  },
 });
 const ProjectTitle = styled("header", {
-  display: "flex",
-  gap: 16,
-  justifyContent: "flex-start",
-  alignItems: "center",
+  base: {
+    display: "flex",
+    gap: "16px",
+    justifyContent: "flex-start",
+    alignItems: "center",
+  },
 });
 const ProjectLinks = styled("ul", {
-  display: "flex",
-  justifyContent: "flex-end",
-  flex: 1,
-  gap: 8,
+  base: {
+    display: "flex",
+    justifyContent: "flex-end",
+    flex: 1,
+    gap: "8px",
+  },
 });
 const ProjectImage = styled("img", {
-  height: 150,
-  objectFit: "cover",
-  objectPosition: "top",
-  borderRadius: 8,
-  width: "100%",
+  base: {
+    height: "150px",
+    objectFit: "cover",
+    objectPosition: "top",
+    borderRadius: "8px",
+    width: "100%",
+  },
 });

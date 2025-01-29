@@ -1,0 +1,19 @@
+{
+  "language": "en",
+  "dictionaries": [
+    "typescript",
+    "npm",
+    "node",
+    "html",
+    "css",
+    "json",
+    "markdown"
+  ],
+  "words": [
+    "codegen",
+    "pandacss",
+    "polytech",
+    "Segoe",
+    "Webstack"
+  ]
+}

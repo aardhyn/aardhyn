@@ -1,32 +1,31 @@
-import { styled } from "../constant/stitches.config";
+import { styled } from "../../styled-system/jsx";
 import purple from "../asset/purple.jpg";
 
 export const Card = styled("div", {
-  display: "flex",
-  flexDirection: "column",
-  padding: 24,
-  borderRadius: 24,
+  base: {
+    display: "flex",
+    flexDirection: "column",
+    border: "1px solid #222",
+    backdropFilter: "blur(5px)",
 
-  "@sm": {
-    padding: 16,
-    borderRadius: 24,
+    padding: "16px",
+    borderRadius: "24px",
+    lg: {
+      padding: "24px",
+      borderRadius: "24px",
+    },
   },
-
-  border: "1px solid #222",
-
-  backdropFilter: "blur(5px)",
 
   variants: {
     variant: {
       dreamy: {
         overflow: "hidden",
         "&::before": {
-          content: "",
+          content: '""',
           position: "absolute",
           inset: 0,
           zIndex: -1,
-          backgroundImage: `url(${purple})`,
-          backgroundSize: "cover",
+          backgroundImage: `url("asset/purple.jpg")`,
           backgroundPosition: "center",
           filter: "blur(16px)",
         },

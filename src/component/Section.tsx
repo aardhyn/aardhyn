@@ -1,5 +1,5 @@
 import { HTMLAttributes, ReactNode } from "react";
-import { styled } from "../constant/stitches.config";
+import { styled } from "../../styled-system/jsx";
 
 export function Section({
   children,
@@ -13,21 +13,26 @@ export function Section({
 }
 
 const SectionRoot = styled("section", {
-  display: "flex",
-  justifyContent: "center",
-  width: "100%",
+  base: {
+    display: "flex",
+    justifyContent: "center",
+    width: "100%",
+  },
 });
-export const ContentRoot = styled("div", {
-  display: "flex",
-  flexDirection: "column",
-  gap: 24,
-  width: "100%",
-  maxWidth: 1300,
-  paddingInline: 24,
-  paddingBlock: 64,
 
-  "@sm": {
-    paddingBlock: 24,
-    paddingInline: 24,
+export const ContentRoot = styled("div", {
+  base: {
+    display: "flex",
+    flexDirection: "column",
+    gap: "24px",
+    width: "100%",
+    maxWidth: "1300px",
+    paddingBlock: "24px",
+    paddingInline: "24px",
+
+    sm: {
+      paddingInline: "24px",
+      paddingBlock: "64px",
+    },
   },
 });
