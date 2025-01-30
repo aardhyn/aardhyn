@@ -1,7 +1,4 @@
 {
-  "folders": [
-    {
-      "path": "../.",
-    },
-  ],
+  "folders": [{ "path": "../." }],
+  "settings": { "typescript.tsdk": "node_modules/typescript/lib" },
 }

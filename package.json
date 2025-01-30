@@ -9,6 +9,7 @@
   "scripts": {
     "prepare": "panda codegen",
     "dev": "vite --host",
+    "lint": "eslint",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
@@ -21,10 +22,15 @@
     "vite-tsconfig-paths": "^5.1.4"
   },
   "devDependencies": {
+    "@eslint/js": "^9.19.0",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
     "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.19.0",
+    "eslint-plugin-react": "^7.37.4",
+    "globals": "^15.14.0",
     "typescript": "^5.7.3",
+    "typescript-eslint": "^8.22.0",
     "vite": "^6.0.11"
   }
 }
