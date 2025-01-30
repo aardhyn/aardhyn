@@ -1,11 +1,7 @@
-import { Card } from "../component/Card";
-import { H2, H3, P } from "../component/Typography";
-import { PROJECTS, type Project } from "../constant/projects";
-import { styled } from "../../styled-system/jsx";
-import { Section } from "../component/Section";
-import { Badge } from "../component/Badge";
-import { Link } from "../component/Link";
-import { css } from "../../styled-system/css";
+import { Card, Section, Badge, Link, H2, H3, P } from "component";
+import { styled } from "panda/jsx";
+import { css } from "panda/css";
+import { PROJECTS, type Project } from "constant";
 
 const GITHUB_PROJECTS_URL = "https://github.com/aardhyn?tab=repositories";
 

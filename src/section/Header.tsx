@@ -1,16 +1,11 @@
-import Starfield from "../component/Starfield";
 import {
   BookmarkIcon,
   GitHubLogoIcon,
   LinkedInLogoIcon,
 } from "@radix-ui/react-icons";
-import { styled } from "../../styled-system/jsx";
-import { H1 } from "../component/Typography";
-import { Card } from "../component/Card";
-import { Section } from "../component/Section";
+import { styled } from "panda/jsx";
+import { H1, Starfield, Card, Section, Link, Greedy } from "component";
 import purple from "../asset/purple.jpg";
-import { Link } from "../component/Link";
-import { Greedy } from "../component/Greedy";
 
 const FPS = 32;
 const ICON_SIZE = "1rem";

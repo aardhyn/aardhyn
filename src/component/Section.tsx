@@ -1,5 +1,5 @@
 import { HTMLAttributes, ReactNode } from "react";
-import { styled } from "../../styled-system/jsx";
+import { styled } from "panda/jsx";
 
 export function Section({
   children,

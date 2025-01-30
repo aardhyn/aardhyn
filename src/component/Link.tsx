@@ -1,9 +1,8 @@
-import { Link2Icon } from "@radix-ui/react-icons";
-import { styled } from "../../styled-system/jsx";
-import { A } from "./Typography";
-import { RecipeVariantProps } from "../../styled-system/types";
-import { cva } from "../../styled-system/css";
 import { ComponentProps, ReactNode } from "react";
+import { Link2Icon } from "@radix-ui/react-icons";
+import { styled } from "panda/jsx";
+import { cva, type RecipeVariantProps } from "panda/css";
+import { A } from "./Typography";
 
 type LinkProps = ComponentProps<typeof A> & {
   leadingIcon?: ReactNode | false;

@@ -1,5 +1,5 @@
 import { G } from "../component/Typography";
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 
 export type Project = {
   title: string;

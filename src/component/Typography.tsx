@@ -1,4 +1,4 @@
-import { styled } from "../../styled-system/jsx";
+import { styled } from "panda/jsx";
 
 export const H1 = styled("h1", {
   base: {
@@ -13,7 +13,6 @@ export const H2 = styled("h2", {
   base: {
     fontSize: "3rem",
     fontWeight: 700,
-    color: "#fff",
     lineHeight: 1.2,
   },
 });
@@ -22,7 +21,6 @@ export const H3 = styled("h3", {
   base: {
     fontSize: "2rem",
     fontWeight: 700,
-    color: "#fff",
   },
 });
 
@@ -34,8 +32,7 @@ export const A = styled("a", {
 
 export const P = styled("p", {
   base: {
-    color: "#fff",
-    fontSize: "1rem",
+    fontSize: "rem",
   },
 });
 

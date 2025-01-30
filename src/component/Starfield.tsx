@@ -1,5 +1,5 @@
-import { styled } from "../../styled-system/jsx";
-import { CSSProperties, useEffect, useRef, useState } from "react";
+import { type CSSProperties, useEffect, useRef, useState } from "react";
+import { styled } from "panda/jsx";
 
 type Vec2 = {
   x: number;
@@ -56,7 +56,7 @@ const spawnDistance = 20;
 //       so resizing ( changing the center ) moves
 //       the starfield
 
-export default function Starfield({
+export function Starfield({
   width = "100%",
   height = "100%",
   fps = FPS,

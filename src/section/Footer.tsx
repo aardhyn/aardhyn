@@ -1,5 +1,5 @@
-import { styled } from "../../styled-system/jsx";
-import signature from "../asset/signature.png";
+import { styled } from "panda/jsx";
+import signature from "asset/signature.png";
 
 const START_DATE = new Date("2023-02-18");
 const START_CONDENSED = START_DATE.getFullYear();

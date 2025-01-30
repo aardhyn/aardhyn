@@ -1,5 +1,4 @@
-import { styled } from "../../styled-system/jsx";
-import purple from "../asset/purple.jpg";
+import { styled } from "panda/jsx";
 
 export const Card = styled("div", {
   base: {

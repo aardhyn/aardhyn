@@ -1,12 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-
-import { Header, Intro, Footer } from "./section";
-import { Projects } from "./section/Project";
-import { Greedy } from "./component/Greedy";
+import { Header, Intro, Footer, Projects } from "section";
+import { Greedy } from "component";
+import { styled } from "panda/jsx";
 
 import "./index.css";
-import { styled } from "../styled-system/jsx";
 
 const Root = styled("main", { base: { minHeight: "100vh" } });
 

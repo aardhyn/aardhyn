@@ -1,7 +1,6 @@
-import { styled } from "../../styled-system/jsx";
-import { ContentRoot, Section } from "../component/Section";
-import { P, G, H3 } from "../component/Typography";
 import Balancer from "react-wrap-balancer";
+import { styled } from "panda/jsx";
+import { Section, P, G, H3 } from "../component";
 
 export function Intro() {
   return (
