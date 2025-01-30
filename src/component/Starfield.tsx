@@ -1,10 +1,15 @@
 import { type CSSProperties, useEffect, useRef, useState } from "react";
 import { styled } from "panda/jsx";
 
-type Vec2 = {
-  x: number;
-  y: number;
-};
+const SECOND_MS = 1000;
+const FPS = 60;
+const OPACITY = 0.02;
+const OPACITY_STEP = 1.1;
+const SIZE_STEP = 1.006;
+const SPEED_STEP = 1.03;
+const SPAWN_DISTANCE_PX = 20;
+
+type Vec2 = { x: number; y: number };
 type Star = {
   position: Vec2;
   speed: number;
@@ -45,16 +50,8 @@ function isVisible(position: Vec2, w: number, h: number) {
   return position.x > 0 && position.x < w && position.y > 0 && position.y < h;
 }
 
-const FPS = 60;
-const opacity = 0.02;
-const opacityStep = 1.1;
-const sizeStep = 1.006;
-const speedStep = 1.03;
-const spawnDistance = 20;
-
-// todo: replace position with distance from center
-//       so resizing ( changing the center ) moves
-//       the starfield
+// todo: compute the stars position on a unit vector each frame an interpolate
+// the position based on the current size of the starfield.
 
 export function Starfield({
   width = "100%",
@@ -79,11 +76,11 @@ export function Starfield({
     const angle = random(0, 360);
     const newStar = {
       position: {
-        x: center.x + Math.cos(angle) * spawnDistance,
-        y: center.y + Math.sin(angle) * spawnDistance,
+        x: center.x + Math.cos(angle) * SPAWN_DISTANCE_PX,
+        y: center.y + Math.sin(angle) * SPAWN_DISTANCE_PX,
       },
       angle,
-      opacity,
+      opacity: OPACITY,
       speed: random(0.1, 3),
       size: random(0.5, 1),
       color: randomColor(100, 90),
@@ -92,9 +89,9 @@ export function Starfield({
     setStars([
       ...visibleStars.map((star) => ({
         ...star,
-        size: star.size * sizeStep,
-        speed: star.speed * speedStep,
-        opacity: star.opacity * opacityStep,
+        size: star.size * SIZE_STEP,
+        speed: star.speed * SPEED_STEP,
+        opacity: star.opacity * OPACITY_STEP,
         position: {
           x: star.position.x + Math.cos(star.angle) * star.speed,
           y: star.position.y + Math.sin(star.angle) * star.speed,
@@ -104,10 +101,9 @@ export function Starfield({
     ]);
   };
 
-  // set update
-  const timerId = useRef<number>();
+  const timerId = useRef<number>(undefined);
   const startUpdate = () => {
-    timerId.current = setInterval(() => update(), 1000 / fps);
+    timerId.current = setInterval(() => update(), SECOND_MS / fps);
   };
   useEffect(() => {
     startUpdate();
