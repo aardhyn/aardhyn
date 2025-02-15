@@ -9,10 +9,6 @@ export const Card = styled("div", {
 
     padding: "16px",
     borderRadius: "24px",
-    lg: {
-      padding: "24px",
-      borderRadius: "24px",
-    },
   },
 
   variants: {

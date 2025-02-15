@@ -7,7 +7,7 @@ export function Section({
 }: { children: ReactNode } & HTMLAttributes<HTMLDivElement>) {
   return (
     <SectionRoot {...props}>
-      <ContentRoot>{children}</ContentRoot>
+      <ContentRoot className="section-content">{children}</ContentRoot>
     </SectionRoot>
   );
 }
@@ -24,15 +24,17 @@ export const ContentRoot = styled("div", {
   base: {
     display: "flex",
     flexDirection: "column",
-    gap: "24px",
+    gap: "16px",
     width: "100%",
     maxWidth: "1300px",
-    paddingBlock: "24px",
-    paddingInline: "24px",
+
+    paddingBlock: "48px",
+    paddingInline: "16px",
 
     sm: {
-      paddingInline: "24px",
+      gap: "24px",
       paddingBlock: "64px",
+      paddingInline: "24px",
     },
   },
 });

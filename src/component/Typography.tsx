@@ -11,7 +11,7 @@ export const H1 = styled("h1", {
 
 export const H2 = styled("h2", {
   base: {
-    fontSize: "3rem",
+    fontSize: "2.2rem",
     fontWeight: 700,
     lineHeight: 1.2,
   },
@@ -19,7 +19,7 @@ export const H2 = styled("h2", {
 
 export const H3 = styled("h3", {
   base: {
-    fontSize: "2rem",
+    fontSize: "1.5rem",
     fontWeight: 700,
   },
 });
@@ -32,7 +32,7 @@ export const A = styled("a", {
 
 export const P = styled("p", {
   base: {
-    fontSize: "rem",
+    fontSize: "1rem",
   },
 });
 

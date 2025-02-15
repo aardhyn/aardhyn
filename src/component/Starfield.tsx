@@ -2,7 +2,7 @@ import { type CSSProperties, useEffect, useRef, useState } from "react";
 import { styled } from "panda/jsx";
 
 const SECOND_MS = 1000;
-const FPS = 60;
+const FPS = 32;
 const OPACITY = 0.02;
 const OPACITY_STEP = 1.1;
 const SIZE_STEP = 1.006;
@@ -56,11 +56,9 @@ function isVisible(position: Vec2, w: number, h: number) {
 export function Starfield({
   width = "100%",
   height = "100%",
-  fps = FPS,
 }: {
   width?: CSSProperties["width"];
   height?: CSSProperties["height"];
-  fps?: number;
 }) {
   const [stars, setStars] = useState<Star[]>([]);
   const ref = useRef<SVGSVGElement>(null);
@@ -103,7 +101,7 @@ export function Starfield({
 
   const timerId = useRef<number>(undefined);
   const startUpdate = () => {
-    timerId.current = setInterval(() => update(), SECOND_MS / fps);
+    timerId.current = setInterval(() => update(), SECOND_MS / FPS);
   };
   useEffect(() => {
     startUpdate();

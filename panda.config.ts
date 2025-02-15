@@ -2,7 +2,7 @@ import { defineConfig, defineGlobalStyles } from "@pandacss/dev";
 
 const globalCss = defineGlobalStyles({
   ":root": {
-    fontSize: "13px",
+    fontSize: "14px",
     sm: { fontSize: "16px" },
   },
   body: {
