@@ -9,7 +9,7 @@ export function Projects() {
   return (
     <Section>
       <H2>Portfolio</H2>
-      <P>Some of my projects that I&apos;m most proud of.</P>
+      <P>Some recent projects I&apos;m proud of.</P>
       <ProjectGrid>
         {PROJECTS.map((project, i) => (
           <Project key={i} project={project} />
