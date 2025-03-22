@@ -29,15 +29,13 @@ export function Intro() {
         </Balancer>
         <Balancer>
           <P>
-            Having graduated the{" "}
+            Having graduated from the{" "}
             <G color="warm">Bachelor of Information Technology</G> with{" "}
-            <G color="cool">Distinction</G> last year, and with over{" "}
-            <G color="cool">2 years</G> of experience developing software using{" "}
-            <G color="cool">React</G> and <G color="cool">TypeScript</G>,
-            I&apos;ve gained a solid foundation in frontend web technologies,
-            networking, databases, and devops. For now, I&apos;m continuing to
-            hone my skills as a Software Engineer and invest in opportunities to
-            grow into a <G color="warm">Full Stack</G> role.
+            <G color="cool">Distinction</G> mid last year, I&apos;ve gained a
+            solid foundation in software development, networking, databases,
+            quality assurance and CI/CD pipelines, devops (AWS and Azure),
+            design patterns and algorithms, and team building/agile (Scrum)
+            methodologies.
           </P>
         </Balancer>
         <Balancer>
