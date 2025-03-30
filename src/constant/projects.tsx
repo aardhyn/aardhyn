@@ -56,7 +56,7 @@ export const PROJECTS = [
       </>
     ),
     link: {
-      // source: "https://github.com/aardhyn/invoice", // fixme: private repo
+      source: "https://github.com/aardhyn/invoice",
       // live: "https://invoice.aardhyn.dev", // fixme: not deployed
     },
   },
