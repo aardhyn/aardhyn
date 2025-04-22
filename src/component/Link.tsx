@@ -27,7 +27,6 @@ const styles = cva({
     display: "inline-flex",
     gap: "8px",
     alignItems: "center",
-    padding: "8px",
 
     opacity: 0.5,
     transition: "opacity 200ms ease-in-out",

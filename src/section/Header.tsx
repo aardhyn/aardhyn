@@ -1,28 +1,27 @@
 import {
-  BookmarkIcon,
+  DiscordLogoIcon,
   GitHubLogoIcon,
   LinkedInLogoIcon,
 } from "@radix-ui/react-icons";
 import { styled } from "panda/jsx";
-import { H1, Starfield, Card, Section, Link, Greedy } from "component";
+import { H1, Starfield, Card, Section, Link } from "component";
 import purple from "asset/purple.jpg";
 
 const LINKS = [
   {
     href: "https://github.com/aardhyn",
     Icon: GitHubLogoIcon,
-    children: "GitHub",
+    label: "GitHub",
   },
   {
     href: "https://www.linkedin.com/in/aardhyn",
     Icon: LinkedInLogoIcon,
-    children: "LinkedIn",
+    label: "LinkedIn",
   },
-  "spacer",
   {
-    href: "https://www.op.ac.nz/programmes/nzqa/bachelor-of-information-technology",
-    Icon: BookmarkIcon,
-    children: "BIT with Distinction",
+    href: "https://discord.com/invite/e77xpdxhUs",
+    Icon: DiscordLogoIcon,
+    label: "Discord",
   },
 ] as const;
 const ICON_SIZE = "1rem";
@@ -39,21 +38,16 @@ export function Header() {
           </Heading>
         </Top>
         <Bottom>
-          {LINKS.map((link, i) => (
-            <>
-              {link === "spacer" ? (
-                <Greedy key={i} />
-              ) : (
-                <Link
-                  href={link.href}
-                  leadingIcon={<link.Icon {...ICON_PROPS} />}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {link.children}
-                </Link>
-              )}
-            </>
+          {LINKS.map((link, index) => (
+            <Link
+              key={index}
+              href={link.href}
+              leadingIcon={<link.Icon {...ICON_PROPS} />}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {link.label}
+            </Link>
           ))}
         </Bottom>
         <Starfield />
@@ -95,9 +89,11 @@ const Top = styled("div", {
 const Bottom = styled("div", {
   base: {
     display: "flex",
-    justifyContent: "space-between",
-
+    justifyContent: "flex-end",
+    marginRight: "3px", // aligns better with the corner visually.
     fontSize: { smDown: "0.8rem" },
+    "&>*:not(:last-child)": { pr: "16px" }, // apply gap without dead link space
+    "&>*:not(:first-child)": { pl: "16px" }, // ''
   },
 });
 

@@ -81,7 +81,7 @@ const ProjectLinks = styled("ul", {
     display: "flex",
     justifyContent: "flex-end",
     flex: 1,
-    gap: "8px",
+    gap: "16px",
   },
 });
 const ProjectImage = styled("img", {
