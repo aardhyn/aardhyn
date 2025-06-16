@@ -14,17 +14,7 @@ export function Intro() {
           <P>
             I&apos;m a <G color="warm">Software Engineer</G> with a passion for
             building high quality products with beautiful design solidly based
-            on maximizing user value. I&apos;m an invaluable member of a small
-            team developing a website builder and CMS platform called{" "}
-            <G color="cool">Webstack</G>. Developed and hosted completely within{" "}
-            <G color="cool">New Zealand</G>.
-          </P>
-        </Balancer>
-        <Balancer>
-          <P>
-            Initially starting as a junior, I now maintain the entirety of the
-            frontend and contribute heavily to the design and direction of the
-            software as we steam ahead towards an official release.
+            on maximizing user value. 
           </P>
         </Balancer>
         <Balancer>
