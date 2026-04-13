@@ -21,7 +21,7 @@ export function Intro() {
           <P>
             Having graduated from the{" "}
             <G color="warm">Bachelor of Information Technology</G> with{" "}
-            <G color="cool">Distinction</G> mid last year, I&apos;ve gained a
+            <G color="cool">Distinction</G> mid 2024, I&apos;ve gained a
             solid foundation in software development, networking, databases,
             quality assurance and CI/CD pipelines, devops (AWS and Azure),
             design patterns and algorithms, and team building/agile (Scrum)
